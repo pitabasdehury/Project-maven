@@ -16,7 +16,7 @@ public class Demo1 {
     @Test(priority = 1, dependsOnMethods = {"openBrowser"})
     public void openFacebook(){
         driver.get("https://www.facebook.com");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 
         Assert.assertTrue(driver.getTitle().contains("Facebook"));  // checking title of the page
 
